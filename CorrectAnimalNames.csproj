@@ -4,13 +4,14 @@
     <TargetFramework>net35</TargetFramework>
     <Copyright>Copyright ©  2022 algernon</Copyright>
     <Description>A Cities: Skylines mod.</Description>
-	<Version>0.1</Version>
+	<Version>1.0</Version>
 	<ManagedDLLPath>$(ProgramFiles)/Steam/steamapps/common/Cities_Skylines/Cities_Data/Managed</ManagedDLLPath>
 	<ManagedDLLPath>$(MSBuildProgramFiles32)/Steam/steamapps/common/Cities_Skylines/Cities_Data/Managed</ManagedDLLPath>
     <AssemblySearchPaths>
       $(AssemblySearchPaths);
       $(ManagedDLLPath)
     </AssemblySearchPaths>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -33,11 +34,23 @@
   </ItemGroup>
 	
   <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+	
+  <ItemGroup>
     <TranslationFiles Remove="Translations\en-EN.csv" />
   </ItemGroup>
 	
   <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+	
+  <ItemGroup>
     <PackageReference Include="CitiesHarmony.API" Version="2.1.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <Target Name="DeployToModDirectory" AfterTargets="Build">
