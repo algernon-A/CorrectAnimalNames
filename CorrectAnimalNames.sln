@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanAnimalNames", "CleanAnimalNames.csproj", "{C1B4BCB6-F7E7-448E-A3FD-4EF032FFE509}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrectAnimalNames", "CorrectAnimalNames.csproj", "{C1B4BCB6-F7E7-448E-A3FD-4EF032FFE509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

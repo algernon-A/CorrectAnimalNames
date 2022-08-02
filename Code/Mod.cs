@@ -9,7 +9,7 @@ namespace CleanAnimalNames
     /// </summary>
     public class Mod : IUserMod
     {
-        public static string ModName => "Clean Animal Names";
+        public static string ModName => "Correct Animal Names";
 
         public string Name => ModName + " " + ModUtils.CurrentVersion;
         public string Description => "Cleans up the names of custom animal prefabs";
